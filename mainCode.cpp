@@ -1,14 +1,18 @@
 #include "iostream"
 #include "key.h"
+#include "lambda.h"
 #define code 0;
 using namespace std;
 
 
 int  main()
 {
+	showLambda();
+
+	
+#if code
 	showPtrAdd();
 	ShwoPtrDown();
-#if code
 	showDateType();
 #endif
 #if code
