@@ -4,3 +4,4 @@
 #endif // !__LAMBDA_H
 
 void showLambda();
+int  fac(int n);

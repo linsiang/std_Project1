@@ -27,6 +27,12 @@
     <ClCompile Include="lambda.cpp">
       <Filter>MyCode</Filter>
     </ClCompile>
+    <ClCompile Include="Array_test.cpp">
+      <Filter>MyCode</Filter>
+    </ClCompile>
+    <ClCompile Include="MyString.cpp">
+      <Filter>MyCode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="key.h">
@@ -34,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="lambda.h">
       <Filter>MyCode</Filter>
+    </ClInclude>
+    <ClInclude Include="MyString.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

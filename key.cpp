@@ -1,8 +1,14 @@
 #include <iostream>
 #include <stdio.h>
 #include "key.h"
+#include "stdlib.h"
+#include "time.h"
 using namespace  std;
 const short max = 5;
+
+//对x取余数，表示得出的是0到x的伪随机数
+#define Random(x){rand()%x}  
+//产生指定范围的随机数。
 
 void showShift()
 {
@@ -91,3 +97,48 @@ void ShwoPtrDown()
 		P--;
 	}
 }
+
+
+/**
+c++随机数的产生
+*/
+
+void showSrand()
+{   //设置随机数种子,用时间来做不同的种子，这样每次产生的随机数都不一样
+	srand((int)time(NULL));
+	//输出随机数
+	int a = 0;
+	for (int i = 0; i < 10; i++)
+	{   //[0,3)
+		a = rand() % 3;
+		cout << a << endl;
+	}
+	cout << "********************************" << endl;
+	int Freedom = Random(8);
+	cout << Freedom << endl;
+}
+
+/*
+ 产生指定范围的随机数,随机数的公式不需要背下来，只要理解了怎么来的就行[0，x）-> rand()%x;
+*/
+
+void RandomNum(int m, int n)
+{
+	srand((int)time(NULL));
+	int a = 0,b= 0,c= 0,d=0;
+	/*
+	 (m,n) (rand()%(n-m+1))+a-1;
+	 [m.n) (rand()%(n-m))+a
+	 (m,n] (rand()%(n-m))+a+1
+	 [m,n] (rand()%(n-m+1))+a
+	*/
+	
+	for (int i = 0; i < 10; i++)
+	{
+		a = rand() % m + n - m + 1;
+		cout << a << endl;
+	}
+
+}
+
+

@@ -1,16 +1,37 @@
 #include "iostream"
 #include "key.h"
 #include "lambda.h"
+#include "MyString.h"
 #define code 0;
 using namespace std;
 
 
 int  main()
-{
-	showLambda();
+{   
 
-	
+	etstString();
+//	showStr();
+
 #if code
+	sort_default();
+#endif
+#if code
+	showVector();
+#endif
+#if code
+	int arr[10];
+	showArr(arr);
+	showArr1();
+#endif
+#if code
+	RandomNum(4, 6);
+	showSrand();
+#endif
+#if code
+
+	int a = fac(5);
+	std::cout << a << endl;
+	showLambda();
 	showPtrAdd();
 	ShwoPtrDown();
 	showDateType();
