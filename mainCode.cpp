@@ -2,6 +2,7 @@
 #include "key.h"
 #include "lambda.h"
 #include "MyString.h"
+#include "stu.h"
 #define code 0;
 using namespace std;
 
@@ -9,10 +10,17 @@ using namespace std;
 int  main()
 {   
 
-	etstString();
-//	showStr();
+	stu student;
+	student.setCircle(100);
+	student.setLength(123);
+	student.setWeith(234);
+	cout << student.getCircle() << endl << student.getLength() << endl << student.getWeith() << endl;
+
 
 #if code
+	inputString();
+	etstString();
+	showStr();
 	sort_default();
 #endif
 #if code
@@ -41,11 +49,7 @@ int  main()
 #endif // code
 
 #if code
-	for (int i = 0; i < 100; i++)
-	{
-		printf("I am fucking coming !!!!  \n");
-		std::cout << "I am using the std to printf " << endl;
-	}
+
 #endif
 	return 0;
 }

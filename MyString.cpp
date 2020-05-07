@@ -3,6 +3,11 @@
 #include <cstring>
 #include <xstring>
 using namespace std;
+
+
+
+#define N 100
+
 /*
  int main()
 {
@@ -37,12 +42,43 @@ void etstString()
 	string shift = " I am fucking coming";
 	http.append(shift);
 	cout << http << http.length() << endl;
+	//找到fucking的位置
 	int pos = http.find("fucking");
 	cout << pos << endl;
+	//替换掉pos位置的后七位字符为shiftok
 	http.replace(pos, 7, "shiftok");
 	cout << http << endl;
+	//找到最后一次和第一出线某个字符的位置
 	int first = http.find_first_of("s");
 	int last = http.find_last_of("k");
-
-	cout << http.substr(first + 1, last - first) << endl;
+	//剪切从某个位置到某个位置的部分出来,但是这个被剪切的字符串是不会被改变的，相当于是提取某个部分出来
+	string temp = http.substr(first, last - first + 1);
+	cout << temp << endl;
+	cout << http << endl;
 }
+/*
+ 从键盘输入一堆数字或者是字母 的组合内容，返回结果显示输入的数字和字母的个数
+*/
+
+int inputString()
+{
+	char X[N];
+	cin.getline(X, N);                               //以cin.getline形式输入
+	int a = 0, b = 0;
+	for (int i = 0; i < N; i++)
+	{
+		if (X[i] == '#')                             //为#为结束标志
+			break;
+		if (X[i] >= '0' && X[i] <= '9')
+			a++;                                    //统计数字个数
+		if ((X[i] >= 'a' && X[i] <= 'z') || (X[i] >= 'A' && X[i] <= 'Z'))
+			b++;                                    //统计英文字母个数
+	}
+	cout <<"数字的个数为：" << a << endl<<"字母的个数为：" << b << endl;
+	return 0;
+}
+
+
+
+
+

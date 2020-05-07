@@ -144,11 +144,13 @@
     <ClCompile Include="lambda.cpp" />
     <ClCompile Include="mainCode.cpp" />
     <ClCompile Include="MyString.cpp" />
+    <ClCompile Include="stu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="key.h" />
     <ClInclude Include="lambda.h" />
     <ClInclude Include="MyString.h" />
+    <ClInclude Include="stu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

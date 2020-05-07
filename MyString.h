@@ -4,3 +4,4 @@
 #endif // !__MYSTRING_H
 
 void etstString();
+int inputString();
